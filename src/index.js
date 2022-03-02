@@ -14,3 +14,5 @@ const arr2 = arr1.map((e) => e + 1);
 const arr3 = arr1.map((e) => e + 2);
 
 console.log(f(312), arr2, arr3);
+
+console.log('aaaaa');
