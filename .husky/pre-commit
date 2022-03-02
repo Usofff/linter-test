@@ -3,4 +3,5 @@
 
 # npm test
 
-exit 1
+npm run format
+npm run eslint
