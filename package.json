@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "",
+    "lint": "npx eslint —fix ./**/*.{js}",
+    "prepare": "husky install",
+    "lint-staged": "npx eslint --fix ./ --max-warnings 0 && npx prettier --write ."
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
   },
   "repository": {
     "type": "git",
@@ -16,5 +23,18 @@
   "bugs": {
     "url": "https://github.com/Usofff/linter-test/issues"
   },
-  "homepage": "https://github.com/Usofff/linter-test#readme"
+  "homepage": "https://github.com/Usofff/linter-test#readme",
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
+    "prettier": "2.5.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
 }
